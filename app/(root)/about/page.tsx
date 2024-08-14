@@ -1,10 +1,17 @@
-import { authors } from '@/constants'
+import { getAuthors } from '@/actions/blog.action'
+// import { authors } from '@/constants'
 import { Dot, Home } from 'lucide-react'
+import { Metadata } from 'next'
 import Image from 'next/image'
 import Link from 'next/link'
-import React from 'react'
+import React, { useEffect } from 'react'
 
-const AboutPage = () => {
+export const metadata: Metadata = {
+  title: 'About Us',
+}
+
+const AboutPage = async () => {
+  const authors = await getAuthors()
   return (
     <div className='container   px-4 md:mx-auto '>
       <h2 className='text-center text-4xl section-title font-creteRound mt-36'>
@@ -50,20 +57,20 @@ const AboutPage = () => {
       <div className='flex justify-around max-md:flex-col max-md:space-y-4 max-md:items-center'>
         {authors.map(item => (
           <Link
-            href={'/author'}
+            href={`/author/${item.id}`}
             key={item.name}
             className='flex flex-col space-y-2 w-52 text-center'
           >
             <Image
               className='object-cover rounded-md grayscale hover:grayscale-0 transition-all'
-              src={item.image}
+              src={item.image?.url}
               alt={item.name}
               width={320}
               height={235}
             />
             <h3 className='text-2xl font-creteRound'>{item.name}</h3>
             <p className='text-muted-foreground'>
-              <span className='font-bold text-white'>1</span> Published posts
+              <span className='font-bold text-white'>{item.blogs?.length}</span> Published posts
             </p>
           </Link>
         ))}

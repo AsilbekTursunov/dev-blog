@@ -1,9 +1,9 @@
+import { getLastBlocks } from '@/actions/blog.action'
 import BlogCard from '@/components/card/blog'
-import BgArrow from '@/components/shared/bg-craft'
-import { blogs } from '@/constants'
+import BgArrow from '@/components/shared/bg-craft' 
 import React from 'react'
-
-const HomePage = () => {
+const HomePage = async () => {
+  const blogs = await getLastBlocks()
   return (
     <div className='container   px-4 md:mx-auto'>
       <div className='relative min-h-[60vh] flex items-center justify-center'>
