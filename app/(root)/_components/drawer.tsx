@@ -58,6 +58,7 @@ const SearchDrawer = () => {
                   href={`/blogs/${blog.slug}`}
                   className='flex flex-col gap-2 p-2'
                   onClick={() => setBlogs([])}
+                  key={blog.id}
                 >
                   <DrawerClose className='flex flex-col gap-2 p-2  w-full'>
                     <div className='relative bg-muted-foreground/20 rounded-md w-full flex justify-center'>

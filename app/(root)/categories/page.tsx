@@ -26,6 +26,7 @@ const Categories = async () => {
       <div className='flex flex-wrap justify-center gap-4 mt-20'>
         {response.map(item => (
           <Link
+            key={item.slug}
             href={`/categories/${item.slug}`}
             className='bg-secondary p-4 w-56 rounded-md shadow-xl flex flex-col items-center justify-center hover:bg-secondary/80 transition-colors dark:shadow-white/10 space-y-2'
           >

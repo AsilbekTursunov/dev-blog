@@ -31,7 +31,7 @@ const ArchivePage = async () => {
         <span className='mx-2 text-muted-foreground'>Archive</span>
       </div>
       {archive.map(item => (
-        <>
+        <div key={item.year}>
           <div className='flex flex-col space-y-3 mt-14 md:px-20'>
             <div className='relative'>
               <span className='text-5xl font-creteRound relative z-20'>
@@ -41,7 +41,7 @@ const ArchivePage = async () => {
             </div>
           </div>
           {item.blogs.map(blog => (
-            <div className='flex flex-col space-y-2 mt-5 md:px-20'>
+            <div key={blog.slug} className='flex flex-col space-y-2 mt-5 md:px-20 ml-10'>
               <div className='flex gap-2 text-lg text-muted-foreground'>
                 <p>{moment(blog.createdAt).format('MMM DD, YYYY')}</p>
                 <Dot />
@@ -54,7 +54,7 @@ const ArchivePage = async () => {
               </div>
             </div>
           ))}
-        </>
+        </div>
       ))}
     </div>
   )
