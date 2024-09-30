@@ -58,8 +58,7 @@ const Meals = ({ meals: data }: { meals: IMeal[] }) => {
             className={cn(
               'rounded-3xl  relative h-72 bg-center w-full bg-cover overflow-hidden',
               filter !== meal.category ? 'hidden' : 'block'
-            )}
-            // style={{ backgroundImage: `url(${meal.imageUrl.url})` }}
+            )} 
           >
             <Image
               src={meal.imageUrl.url}
