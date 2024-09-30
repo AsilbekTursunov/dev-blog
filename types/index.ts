@@ -53,3 +53,13 @@ export interface IArchivedBlog {
   year: string
   blogs: IBlog[]
 }
+
+export interface IMeal {
+  id: string
+  mealTitle: string
+  imageUrl: {
+    url: string
+    id:string
+  }
+  category: string
+}

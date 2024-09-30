@@ -1,4 +1,4 @@
-import { Contact2, FileCode2, FolderArchive, Home, ListCollapse } from 'lucide-react'
+import { Contact2, FileCode2, FolderArchive, Home, ListCollapse, Menu } from 'lucide-react'
 
 export const navLinks = [
   { name: 'Home', route: '/', icon: Home },
@@ -6,6 +6,7 @@ export const navLinks = [
   { name: 'Blogs', route: '/blogs', icon: FileCode2 },
   { name: 'Archive', route: '/blogs/archive', icon: FolderArchive },
   { name: 'Contact', route: '/contact', icon: Contact2 },
+  { name: 'Oddmenu', route: '/oddmenu', icon: Menu },
 ]
 
 export const popularCategories = [
