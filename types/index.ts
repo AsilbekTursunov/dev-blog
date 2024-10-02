@@ -59,7 +59,25 @@ export interface IMeal {
   mealTitle: string
   imageUrl: {
     url: string
-    id:string
+    id: string
   }
   category: string
+}
+
+export interface IMenuMeal {
+  id: string
+  title: string
+  description: string
+  image: string
+  quantity: number
+  price: number
+  lastPrice: number
+  types: ITypes[]
+  order: number
+}
+
+export interface ITypes {
+  name: string
+  price: number
+  label: string
 }

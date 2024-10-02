@@ -53,12 +53,12 @@ const Meals = ({ meals: data }: { meals: IMeal[] }) => {
       <div className='flex flex-col gap-4 mt-3'>
         {(searchTearm.length > 0 ? searchTearm : data).map(meal => (
           <Link
-            href={'/'}
+            href={`/oddmenu/${meal.id}`}
             key={meal.mealTitle}
             className={cn(
               'rounded-3xl  relative h-72 bg-center w-full bg-cover overflow-hidden',
               filter !== meal.category ? 'hidden' : 'block'
-            )} 
+            )}
           >
             <Image
               src={meal.imageUrl.url}

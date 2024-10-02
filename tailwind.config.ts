@@ -23,6 +23,7 @@ const config = {
         workSans:['var(--font-workSans)']
       },
       colors: {
+        default:'#f7926d',
         border: "hsl(var(--border))",
         input: "hsl(var(--input))",
         ring: "hsl(var(--ring))",
@@ -64,6 +65,15 @@ const config = {
       },
       backgroundImage: {
         oddMenu: "url('/blogs/oddmenu.jpg')",
+      },
+      borderColor: {
+         default:'#f7926d'
+      },
+      backgroundColor: {
+        default:'#f7926d'
+      },
+      fill: {
+        default:'#f7926d'
       },
       keyframes: {
         "accordion-down": {
